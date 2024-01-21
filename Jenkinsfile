@@ -18,7 +18,7 @@ pipeline {
             stage('Checkout') {
                 steps {
                     deleteDir()
-                    checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/atoschova/project_to_the_bone.git/']]])
+                    checkout([$class: 'GitSCM', branches: [[name: 'master']], userRemoteConfigs: [[url: 'https://github.com/atoschova/project_to_the_bone.git/']]])
                           // Tambahkan pernyataan log untuk menampilkan direktori saat ini
                 }
             }
@@ -29,8 +29,8 @@ pipeline {
                       sh 'ls -l'
                     dir('testdeploy') {
                         // Build Docker image dengan konten HTML
-                        sh 'docker build -t test3 -f Dockerfile .'
-                        // docker.build("${DOCKER_IMAGE}",'-f Dockerfile .')
+                        // sh 'docker build -t test3 -f Dockerfile .'
+                        docker.build("${DOCKER_IMAGE}",'-f Dockerfile .')
                     }
                     // // Build Docker image with the HTML content
                     // docker.build("${DOCKER_IMAGE}", '-f Dockerfile .')

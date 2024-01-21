@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Odyssey | Home</title>
+    <!-- Inter font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <!-- Josefin Sans font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <!-- Font Awesome Import -->
+    <script src="https://kit.fontawesome.com/624804faba.js" crossorigin="anonymous"></script>
+    <!-- End of Font Awesome -->
+    <!-- External JS -->
+    <script src="script.js"></script>
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="showSlides()">
+    <div class="main__container">
+        <section class="hero">
+            <div class="flex__container-column">
+               <nav>
+                  <img class="mobile-logo" src="./assets/nav-logo.png" alt="Bike Odyssey Logo">
+                  <!-- Mobile Menu -->
+                  <div id="myNav" class="overlay">
+                     <div class="flex-overlay">
+                        <button onclick="closeNav()" class="closebtn">
+                           <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="#FFFFFF">
+                              <path d="M0 0h24v24H0V0z" fill="none"/>
+                              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                           </svg>
+                        </button>
+                     </div>
+                     <div class="overlay-content">
+                        <a href="#">Home</a>
+                        <a href="#products">Products</a>
+                        <a href="#services">Services</a>
+                        <a href="#partners">Partners</a>
+                     </div>
+                  </div>
+                  <!-- End of Mobile Menu -->
+                  <ul>
+                     <li>Home</li>
+                     <div class="vertical__divider"></div>
+                     <li>
+                        <a href="#products">Products</a>
+                     </li>
+                     <div class="vertical__divider"></div>
+                     <div class="logo__container">
+                        <img src="./assets/nav-logo.png" alt="Bike Odyssey Logo">
+                     </div>
+                     <div class="vertical__divider"></div>
+                     <li>
+                        <a href="#services">Services</a>
+                     </li>
+                     <div class="vertical__divider"></div>
+                     <li>
+                        <a href="#partners">Partners</a>
+                     </li>
+                  </ul>
+                  <button class="burgermenu--btn" onclick="openNav()">
+                  <i class="fa-solid fa-bars white-icon"></i>
+                  </button>
+               </nav>
+               <div class="herotext__container">
+                  <div class="hero__container--text">
+                     <span>Ride like the wind with <span class="hero__container--brandname">Bike Odyssey</span></span>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="products" id="products">
+            <p class="products--title">Our <span class="title__colored">Products</span></p>
+            <div class="divider"></div>
+            <div class="products__grid">
+               <div class="products__grid--card transition">
+                  <img src="./assets/new-glamour.jpg" alt="New Glamour Motor Model Image" loading="lazy">
+                  <p>New Glamour</p>
+                  <p>$60,000</p>
+               </div>
+               <div class="products__grid--card transition">
+                  <img src="./assets/pleasure-xtec.jpg" alt="Pleasure Xtec Motor Model Image" loading="lazy">
+                  <p>Pleasure+ Xtec</p>
+                  <p>$60,000</p>
+               </div>
+               <div class="products__grid--card transition">
+                  <img src="./assets/xtreme160r.jpg" alt="Xtreme 160R Motor Model Image" loading="lazy">
+                  <p>Xtreme 160R</p>
+                  <p>$60,000</p>
+               </div>
+               <div class="products__grid--card transition">
+                  <img src="./assets/pleasure-platinum.jpg" alt="Pleasure+ Platinum Motor Model Image" loading="lazy">
+                  <p>Pleasure+ Platinum</p>
+                  <p>$60,000</p>
+               </div>
+               <div class="products__grid--card transition">
+                  <img src="./assets/destini-125.jpg" alt="Destini 125 Motor Model Image" loading="lazy">
+                  <p>Destini 125</p>
+                  <p>$60,000</p>
+               </div>
+               <div class="products__grid--card transition">
+                  <img src="./assets/splendor-ismart.webp" alt="Splendor iSmart Motor Model Image" loading="lazy">
+                  <p>Splendor iSmart</p>
+                  <p>$60,000</p>
+               </div>
+               <div class="products__grid--card transition">
+                  <img src="./assets/passion-pro.jpg" alt="Passion Pro Motor Model Image" loading="lazy">
+                  <p>Passion Pro</p>
+                  <p>$60,000</p>
+               </div>
+               <div class="products__grid--card transition">
+                  <img src="./assets/maestro-edge.jpg" alt="Maestro Edge 125 Motor Model Image" loading="lazy">
+                  <p>Maestro Edge 125</p>
+                  <p>$60,000</p>
+               </div>
+            </div>
+            <button>View All</button>
+         </section>
+         <section class="partners">
+            <div class="partners__grid">
+               <div class="textlogos__container">
+                  <p>Take your Ride with us</p>
+                  <p>Founded during the pandemic, Bike Odyssey has been helping motorbike enthusiasts 
+                     continue their passion for the ride with their beautiful motorbikes. 
+                     Our services, along with our partners, 
+                     have helped people either kickstart or improve their motorbike journey 
+                     as we embark on this lifelong experience of riding like the wind.
+                  </p>
+               </div>
+               <div class="illustration__container">
+                  <img src="./assets/Motocross-amico.png" alt="Motocross illustration" loading="lazy"> 
+               </div>
+            </div>
+         </section>
+         <section class="team">
+            <div class="center">
+                <h1>Founder</h1>
+            </div>
+    
+            <div class="team-content">
+                <div class="box">
+                    <img src="img/01.png">
+                    <h3>Asep</h3>
+                    <h5>Chief Executive Officer</h5>
+                    <div class="icons">
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-facebook-box-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+    
+                <div class="box">
+                    <img src="img/02.png">
+                    <h3>Mamat</h3>
+                    <h5>Founder</h5>
+                    <div class="icons">
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-facebook-box-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                    </div>
+                </div>
+    
+            </div>
+        </section>
+         <section class="brandpartners" id="partners">
+            <p class="services--title">Meet Our <span class="title__colored">Brand Partners</span></p>
+            <div class="divider"></div>
+            <!-- Slideshow container -->
+               <div class="slideshow-container">
+                  <div class="mySlides fade">
+                  <div class="logogrid__container">
+                     <img src="./assets/honda-250x250.png" alt="Honda brand logo" loading="lazy">
+                     <img src="./assets/gasgas-250x250.png" alt="Gasgas brand logo" loading="lazy">
+                     <img src="./assets/harley-davidson-250x250-logo.png" alt="Harley Davidson brand logo" loading="lazy">
+                  </div>
+                  </div>
+                  <div class="mySlides fade">
+                  <div class="logogrid__container">
+                     <img src="./assets/bimota-250x250.png" alt="Bimota brand logo">
+                     <img src="./assets/suzuki-250x250.png" alt="Suzuki brand logo">
+                     <img src="./assets/kawasaki-250x250.png" alt="Kawasaki brand logo">
+                  </div>
+                  </div>
+                  <div class="mySlides fade">
+                  <div class="logogrid__container">
+                     <img src="./assets/hasqvarna-250x250.png" alt="Husqvarna brand logo">
+                     <img src="./assets/bmw-250x250.png" alt="BMW brand logo">
+                     <img src="./assets/beta-250x250.png" alt="Beta brand logo">
+                  </div>
+                  </div>
+                  <div class="mySlides fade">
+                     <div class="logogrid__container">
+                        <img src="./assets/yamaha-250x250.png" alt="Yamaha brand logo">
+                        <img src="./assets/ducati-250x250.png" alt="Ducati brand logo">
+                        <img src="./assets/vespa-250x250.png" alt="Vespa brand logo">
+                     </div>
+                     </div>
+                  <!-- Next and previous buttons -->
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+               </div>
+               <br>
+               <!-- The dots/circles -->
+               <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                  <span class="dot" onclick="currentSlide(4)"></span>
+               </div>
+         </section>
+         <section class="footer__container">
+            <footer>
+               <div class="footergrid__container">
+                  <div class="footer__grid--col">
+                     <p class="footer__flex--companyname">Bike Odyssey</p>
+                     <div class="socmed">
+                        <div class="facebook__container">
+                           <img src="./assets/fb-logo.png" alt="Facebook logo" loading="lazy">
+                        </div>
+                        <div class="twitter__container">
+                           <img src="./assets/twitter-logo.png" alt="Twitter logo" loading="lazy">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="footer__grid--col--address mt-2">
+                     <p>1389 August Lane Shreveport LA 71101</p>
+                     <p>bikeodyssey@gmail.com</p>
+                  </div>
+                  <div class="footer__grid--col">
+                     <div class="footer__links">
+                        <a href="">Home</a>
+                        <a href="">About</a>
+                        <a href="">Services</a>
+                        <a href="">Partners</a>
+                        <a href="">Gallery</a>
+                        <a href="">Terms & Conditions</a>
+                        <a href="">Privacy Policy</a>
+                     </div>
+                  </div>
+               </div>
+            </footer>
+         </section>
+         <section class="copyright">
+            <p>© 2022 Bike Odyssey. All Rights Reserved</p>
+         </section>
+    </div>
+</body>
+</html>

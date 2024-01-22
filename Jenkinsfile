@@ -12,7 +12,7 @@ pipeline {
         //         // Clean workspace before checkout
         //         deleteDir()
         //         // Checkout the HTML source code from GitHub
-        //         git url: 'https://github.com/andrinahaura/project1.git'
+        //         git url: 'https://github.com/atoschova'
         //     }
         // }
         stage('Run Docker Container') {

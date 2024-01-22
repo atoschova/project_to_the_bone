@@ -22,15 +22,16 @@ pipeline {
                           // Tambahkan pernyataan log untuk menampilkan direktori saat ini
                 }
             }
-            
-        stage('Run Docker from sh') {
+
+       stage('Run Docker from sh') {
             steps {
                 script {
                         docker.image('some-content-nginx').inside {
                         sh 'docker run --name some-nginx -d -p 8081:80 some-content-nginx'
                 }
             }
-        }
+        }}
+    }
 
 
     
@@ -46,7 +47,7 @@ pipeline {
                 }
         }
     }
-        }
+    
 
     post {
         always {
@@ -57,4 +58,4 @@ pipeline {
             }
         }
     }
-}}
+}

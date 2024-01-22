@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE = 'some-content-nginx'
-        CONTAINER_NAME = 'some-nginx3'
+        CONTAINER_NAME = 'some-nginx5'
         PORT_MAPPING = '8081:80'  // Adjust the port mapping as needed
     }
 

@@ -22,6 +22,15 @@ pipeline {
                           // Tambahkan pernyataan log untuk menampilkan direktori saat ini
                 }
             }
+            
+        stage('Run Docker from sh') {
+            steps {
+                script {
+                        docker.image('some-content-nginx').inside {
+                        sh 'docker run --name some-nginx -d -p 8081:80 some-content-nginx'
+                }
+            }
+        }
 
 
     
@@ -30,10 +39,11 @@ pipeline {
                 script {
                     // Run Docker container based on the built image
                     dir("project_to_the_bone"){
-                    sh 'docker run --name some-nginx -d -p 8081:80 some-content-nginx'
+                    docker.image('some-content-nginx').inside {
+                        sh 'docker run --name some-nginx -d -p 8081:80 some-content-nginx'
+                        }
                     }
                 }
-            }
         }
     }
 

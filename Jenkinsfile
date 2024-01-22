@@ -26,13 +26,9 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    dir('testprojek') {
-                      sh 'ls -l'
                         // Build Docker image dengan konten HTML
                         // sh 'docker build -t test3 -f Dockerfile .'
                         sh 'docker run --name some-nginx -d -p 8081:80 some-content-nginx'
-
-                    }
                     // // Build Docker image with the HTML content
                     // docker.build("${DOCKER_IMAGE}", '-f Dockerfile .')
                 }

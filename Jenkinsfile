@@ -47,6 +47,33 @@ pipeline {
                 }
             }
         }
+
+        stage('Run Docker') {
+            steps {
+                script {
+                    // Run Docker container based on the built image
+                    docker.image('some-content-nginx').inside {
+                        sh 'docker run --name some-nginx -d -p 8081:80 some-content-nginx'
+                    }
+                }
+            }
+        }
+
+        stage('Run Docker') {
+            steps {
+                script {
+                    // Run Docker container based on the built image
+                    dir('project_to_the_bone')
+                    docker.image('some-content-nginx').inside {
+                        sh 'docker run --name some-nginx -d -p 8081:80 some-content-nginx'
+                    }
+                }
+            }
+        }
+
+
+
+
     }
 
     post {

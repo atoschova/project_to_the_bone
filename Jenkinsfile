@@ -29,7 +29,9 @@ pipeline {
             steps {
                 script {
                     // Run Docker container based on the built image
+                    dir(project_to_the_bone){
                     sh 'docker run --name some-nginx -d -p 8081:80 some-content-nginx'
+                    }
                 }
             }
         }

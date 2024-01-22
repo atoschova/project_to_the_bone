@@ -28,9 +28,10 @@ pipeline {
                 script {
                         docker.image('some-content-nginx').inside {
                         sh 'docker run --name some-nginx -d -p 8081:80 some-content-nginx'
+                        }
                 }
             }
-        }}
+        }
     }
 
 

@@ -18,6 +18,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
+                    sh 'echo $PATH'
                     // Run Docker container based on the built image
                     docker.image("${DOCKER_IMAGE}").run("-p ${PORT_MAPPING} --name ${CONTAINER_NAME}")
                 }
